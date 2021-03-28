@@ -3,13 +3,13 @@
 启动容器
 
 ```
-docker run -d --name dbalex -p 1521:1521 -e ORACLE_SID=dbalex -e ORACLE_PWD=oracle -e ORACLE_CHARACTERSET=AL32UTF8 -e SGA_SIZE=4G -e PGA_SIZE=2G -e DB_ROLE=primary -e ENABLE_ARCH=true -v /data/dbalex02:/opt/oracle/oradata registry.cn-hangzhou.aliyuncs.com/woqutech/oracle-database-11.2.0.4.0-ee:latest
+docker run -d --name oracle11g -p 1521:1521 -e ORACLE_SID=dbalex -e ORACLE_PWD=oracle -e ORACLE_CHARACTERSET=AL32UTF8 -e SGA_SIZE=4G -e PGA_SIZE=2G -e DB_ROLE=primary -e ENABLE_ARCH=true -v /data/dbalex02:/opt/oracle/oradata registry.cn-hangzhou.aliyuncs.com/woqutech/oracle-database-11.2.0.4.0-ee:latest
 ```
 
 登录容器
 
 ```
-docker exec -ti dbalex bash
+docker exec -ti oracle11g bash
 ```
 
 进入交互界面
